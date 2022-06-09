@@ -12,14 +12,7 @@
         private static readonly IEnumerable<CardType> AllCardTypes = new List<CardType>
                                                                          {
                                                                              CardType.Two,
-                                                                             CardType.Three,
-                                                                             CardType.Four,
-                                                                             CardType.Five,
-                                                                             CardType.Six,
-                                                                             CardType.Seven,
-                                                                             CardType.Eight,
-                                                                             CardType.Nine,
-                                                                             CardType.Ten,
+                                          
                                                                              CardType.Jack,
                                                                              CardType.Queen,
                                                                              CardType.King,

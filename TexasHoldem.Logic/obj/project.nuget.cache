@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UUv1uqWZNlchQ8PFXhhU47+v8KiwNJjBDHdojCXvNacdGAHjrKm21fJ0uARmr6s7CB2otm+xwajN/ErvJjwNRw==",
+  "dgSpecHash": "pPL6pAgAERGc0/BASAHhqtCQkZ9SSefG0e4uP2tef5A6Urd54cSujqwEkWNelcs2kVTF7EVHlC4CdpAZV1irxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\a.samaha\\source\\repos\\poker-grpc-service\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
+  "projectFilePath": "C:\\Users\\d.saurel\\source\\repos\\Poker-Rgpc-Poc\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

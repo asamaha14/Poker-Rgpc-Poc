@@ -17,9 +17,9 @@ namespace TexasHoldem.Logic.Players
 
         protected IPlayer Player { get; }
 
-        public List<Card> Cards => throw new System.NotImplementedException();
+        public List<Card> Cards { get; set; }
 
-        public InternalPlayerMoney PlayerMoney => throw new System.NotImplementedException();
+        public InternalPlayerMoney PlayerMoney { get; set; }
 
         public virtual void StartGame(IStartGameContext context)
         {

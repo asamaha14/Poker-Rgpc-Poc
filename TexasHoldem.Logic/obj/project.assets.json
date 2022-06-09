@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\a.samaha\\.nuget\\packages\\": {}
+    "C:\\Users\\d.saurel\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.samaha\\source\\repos\\poker-grpc-service\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\d.saurel\\source\\repos\\Poker-Rgpc-Poc\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
       "projectName": "TexasHoldem.Logic",
-      "projectPath": "C:\\Users\\a.samaha\\source\\repos\\poker-grpc-service\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
-      "packagesPath": "C:\\Users\\a.samaha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a.samaha\\source\\repos\\poker-grpc-service\\TexasHoldem.Logic\\obj\\",
+      "projectPath": "C:\\Users\\d.saurel\\source\\repos\\Poker-Rgpc-Poc\\TexasHoldem.Logic\\TexasHoldem.Logic.csproj",
+      "packagesPath": "C:\\Users\\d.saurel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\d.saurel\\source\\repos\\Poker-Rgpc-Poc\\TexasHoldem.Logic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\a.samaha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\d.saurel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -29,7 +33,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://nexusoss.betclicstage.com/repository/betclic.nuget.production": {}
+        "https://nexusoss-cloud.betclic.net/repository/betclic.nuget.production": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -61,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

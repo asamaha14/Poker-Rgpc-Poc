@@ -14,8 +14,6 @@
             this.Cards = new List<Card>();
         }
 
-        public List<Card> Cards { get; }
-
         public InternalPlayerMoney PlayerMoney { get; private set; }
 
         public override void StartGame(IStartGameContext context)

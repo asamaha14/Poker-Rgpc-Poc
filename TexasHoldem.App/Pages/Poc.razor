@@ -1,0 +1,104 @@
+﻿@page "/poc"
+
+<div class="container my-5">
+    @MessageReceived
+ 
+  <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" 
+       style="background-image: url(/images/background.png); background-size: cover;">
+       <div class="container">
+       <div class="row">
+        <div class="col-sm">
+          <img src="/images/player1.png" class="rounded float-left" alt="Player 1">
+          @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[0];   
+                <img src="/images/token.png" />@player.BuyIn
+            }
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+         <img src="/images/player2.png" class="rounded float-right" alt="Player 2">
+        @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[1];   
+                <img src="/images/token.png" />@player.BuyIn
+            }
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+            @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[0];   
+                if(player.Cards != null && player.Cards.Any())
+                {
+                   foreach(var card in player.Cards)
+                   {
+                        var file = "/images/" + GetFilenameFromCard(card);
+                        <img src=@file class="rounded">       
+                   }       
+                }
+            }
+           
+        </div>
+        <div class="col-sm">
+          
+        </div>
+        <div class="col-sm">
+            @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[1];   
+                if(player.Cards != null && player.Cards.Any())
+                {
+                   foreach(var card in player.Cards)
+                   {
+                        var file = "/images/" + GetFilenameFromCard(card);
+                        <img src=@file class="rounded">       
+                   }
+                }
+            }
+            
+        </div>       
+      </div>
+      <div class="row">
+        <div class="col-sm">
+            
+        </div>
+        <div class="col-sm">
+          @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[2];   
+                if(player.Cards != null && player.Cards.Any())
+                {
+                   foreach(var card in player.Cards)
+                   {
+                        var file = "/images/" + GetFilenameFromCard(card);
+                        <img src=@file class="rounded">       
+                   }
+                }
+            }
+        </div>
+        <div class="col-sm">
+            
+        </div>       
+      </div>
+      <div class="row">
+        <div class="col-sm">
+            
+        </div>
+        <div class="col-sm">
+          <img src="/images/player3.png" class="rounded" alt="Player 1">
+          @if(_response != null && _response.Players != null)
+            {
+                var player = _response.Players[2];   
+                <img src="/images/token.png" />@player.BuyIn
+            }
+        </div>
+        <div class="col-sm">
+            
+        </div>       
+      </div>
+    </div>
+  </div>
+</div>
