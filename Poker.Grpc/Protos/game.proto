@@ -1,27 +1,18 @@
 ﻿syntax = "proto3";
 
 option csharp_namespace = "Poker.Grpc";
-import "Protos/card.proto";
+import "Protos/player.proto";
 
 package game;
 
 // The greeting service definition.
-service GameService {
+service Game{
   // Sends a greeting
   rpc StartGame (StartGameRequest) returns (StartGameResponse);
-  rpc AddPlayer (AddPlayerRequest) returns (AddPlayerResponse);
 }
 
 message StartGameRequest {}
 
 message StartGameResponse {
-  int32 players = 1;
-}
-
-message AddPlayerRequest {}
-
-message AddPlayerResponse {
-  string name = 1;
-  int32 stackSize = 2;
-  repeated card.Card card = 3;
+  repeated player.Player players = 1;
 }

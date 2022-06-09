@@ -4,6 +4,8 @@ option csharp_namespace = "Poker.Grpc";
 
 import "Protos/card.proto";
 
+package player;
+
 message Player{
 	string Name = 1;
 	int32 BuyIn = 2;
