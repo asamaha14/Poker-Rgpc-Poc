@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Poker.Grpc";
+
+import "Protos/card.proto";
+
+message Player{
+	string Name = 1;
+	int32 BuyIn = 2;
+	repeated card.Card cards= 3;
+}

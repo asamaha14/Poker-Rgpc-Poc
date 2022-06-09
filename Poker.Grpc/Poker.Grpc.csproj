@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\card.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\game.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\player.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>
