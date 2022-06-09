@@ -12,17 +12,16 @@ namespace Poker.Grpc.Services
         public override Task<StartGameResponse> StartGame(StartGameRequest request, ServerCallContext context)
         {
             // Call Game
-            var players = new List<IPlayer>();
-
-            players.Add(new InnovationDayPlayer("ABS"));
-            players.Add(new InnovationDayPlayer("Fatma"));
-            players.Add(new InnovationDayPlayer("Nico"));
-
-            var game = new TexasHoldemGame(players);
-            var result = game.StartGameCustom();
-
+            IEnumerable<IPlayer> result = StartPokerGameInternal();
 
             // Map Response
+            StartGameResponse response = GetGameResponse(result);
+
+            return Task.FromResult(response);
+        }
+
+        private StartGameResponse GetGameResponse(IEnumerable<IPlayer> result)
+        {
             var response = new StartGameResponse();
             RepeatedField<Player> playersToReturn = new RepeatedField<Player>();
 
@@ -33,17 +32,43 @@ namespace Poker.Grpc.Services
             }
 
             response.Players.Add(playersToReturn);
-            return Task.FromResult(response);
+            return response;
+        }
+
+        private static IEnumerable<IPlayer> StartPokerGameInternal()
+        {
+            var players = new List<IPlayer>();
+
+            players.Add(new InnovationDayPlayer("ABS"));
+            players.Add(new InnovationDayPlayer("Fatma"));
+            players.Add(new InnovationDayPlayer("Nico"));
+
+            var game = new TexasHoldemGame(players);
+            var result = game.StartGameCustom();
+            return result;
         }
 
         private Player MapToPlayer(IPlayer player)
         {
-            return new Player()
+            RepeatedField<Card> mappedCards = new RepeatedField<Card>();
+            foreach (var card in player.Cards)
+            {
+                mappedCards.Add(new Card()
+                {
+                    CardSuit = (CardSuit)card.Suit,
+                    CardType = (CardType)card.Type
+                });
+            }
+
+            var mappedPlayer = new Player()
             {
                 Name = player.Name,
                 BuyIn = player.BuyIn,
 
             };
+            mappedPlayer.Cards.Add(mappedCards);
+
+            return mappedPlayer;
         }
 
     }
