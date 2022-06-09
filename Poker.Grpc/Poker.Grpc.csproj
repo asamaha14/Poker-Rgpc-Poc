@@ -14,4 +14,8 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TexasHoldem.Logic\TexasHoldem.Logic.csproj" />
+  </ItemGroup>
+
 </Project>
