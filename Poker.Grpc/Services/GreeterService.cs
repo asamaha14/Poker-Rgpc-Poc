@@ -19,7 +19,7 @@ namespace Poker.Grpc
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello " + request.Name
+                Message = "Hello Mr " + request.Name
             });
         }
     }
